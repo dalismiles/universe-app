@@ -1,0 +1,15 @@
+@import "./styles/_variables.scss";
+@import "./styles/_mixins.scss";
+
+.App {
+  text-align: center;
+
+  .overlay {
+    @include box-model(0, 0, 100vw, 100vh);
+    @include element-position(absolute, 0, auto, auto, 0);
+
+    background-color: $primary-color;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}

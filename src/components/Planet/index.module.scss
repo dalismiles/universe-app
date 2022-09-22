@@ -1,0 +1,38 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.Planet {
+  @include box-model(0, 12px 6px, 200px, 200px, 0, 6px);
+  @include form-text(0.9rem);
+  box-shadow: 0 0 4px $primary-color;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-color;
+    color: $secondary-color;
+  }
+
+  .population {
+  }
+
+  .population::before {
+    content: "Population: ";
+    @include form-text(0.8rem, normal, bold);
+  }
+
+  .diameter {
+  }
+
+  .diameter::before {
+    content: "Diameter: ";
+    @include form-text(0.8rem, normal, bold);
+  }
+
+  .climate {
+  }
+
+  .climate::before {
+    content: "Climate: ";
+    @include form-text(0.8rem, normal, bold);
+  }
+}
